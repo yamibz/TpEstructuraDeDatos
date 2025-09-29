@@ -88,6 +88,7 @@ class Carpeta:
 
 
 class Usuario:
+    """Representa un usuario del sistema de correo, con sus carpetas y operaciones básicas."""
     def __init__(self, nombre: str, email: str):
         self.__nombre = nombre
         self.__email = email
