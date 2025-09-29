@@ -29,5 +29,15 @@
 | -destinatario  |
 | -asunto        |
 | -cuerpo        |
-| -fecha         |
+| -fecha         |  
 +----------------+
+## Justificación del diseño
+El diseño se realizó siguiendo los principios de la **programación orientada a objetos**. 
+Se implementó la interfaz `IMensajeria` para separar la definición de operaciones de mensajería 
+de la implementación concreta en `ServidorCorreo`, lo que facilita la extensibilidad en caso de 
+agregar nuevos tipos de servidores en el futuro. Los atributos se encapsularon mediante propiedades 
+y métodos de acceso, asegurando el control sobre la modificación de datos sensibles (como nombre o 
+estado de lectura de un mensaje). Además, se utilizaron clases específicas para cada entidad 
+(`Usuario`, `Mensaje`, `Carpeta`), favoreciendo la claridad, la cohesión y la reutilización del 
+código. De esta forma, el sistema resulta modular, mantenible y más cercano al funcionamiento de 
+un cliente de correo real.
